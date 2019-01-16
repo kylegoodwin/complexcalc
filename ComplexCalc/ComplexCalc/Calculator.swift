@@ -53,6 +53,19 @@ class Calculator {
         return op(lhs,rhs)
     }
     
+    func mathOp(args: [Int],beg: Int,op: (Int,Int)->Int) -> Int{
+        var i = 0
+        var count = beg
+        
+        while( i < args.count){
+            count = op(count,args[i])
+            i += 1
+        }
+        
+        return count
+        
+    }
+    
     func count(_ list: [Int]) -> Int{
         return list.count
     }
