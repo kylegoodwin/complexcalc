@@ -10,4 +10,62 @@ import Foundation
 
 // All your work will go in here
 class Calculator {
+    
+    func add(lhs: Int, rhs: Int) -> Int {
+        return lhs + rhs
+    }
+    
+    func add(_ list:[Int]) -> Int {
+        var i = 0
+        var count = 0
+        while(i < list.count){
+            count = count + list[i]
+            i += 1
+        }
+        
+        return count
+    }
+    
+    func subtract(lhs: Int, rhs: Int) -> Int {
+        return lhs - rhs
+    }
+    
+    func multiply(lhs: Int, rhs: Int) -> Int {
+        return lhs * rhs
+    }
+    
+    func multiply(_ list:[Int]) -> Int {
+        var i = 0
+        var count = 1
+        while(i < list.count){
+            count = count * list[i]
+            i += 1
+        }
+        
+        return count
+    }
+    
+    func divide(lhs: Int, rhs: Int) -> Int {
+        return lhs/rhs
+    }
+    
+    func mathOp(lhs: Int, rhs: Int, op: (Int,Int)->Int) -> Int{
+        return op(lhs,rhs)
+    }
+    
+    func count(_ list: [Int]) -> Int{
+        return list.count
+    }
+    
+    func avg(_ list: [Int]) -> Int{
+        var i = 0
+        var count = 0
+        while(i < list.count){
+            count = count + list[i]
+            i += 1
+        }
+        
+        return count/i
+    }
+
 }
